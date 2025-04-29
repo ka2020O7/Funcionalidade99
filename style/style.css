@@ -1,0 +1,49 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-items: center;
+    text-align: center;
+    background-image: url(../style/asset/maps.jpg);
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toggle{
+    width: 60px;
+}
+
+#moeda{
+    width: 100px;
+}
+
+#ParaOndeVamos{
+    margin-top: 60%;
+    border: 5%;
+    border-radius: 15%;
+    background-color: rgb(202, 202, 202);
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 30%;
+}
+
+#ParaOndeVamos2{
+    background-color: aliceblue;
+    border-radius: 50px;
+    height: 30%;
+   
+}
+
+.lugares{
+    background-color: aliceblue;
+    border-radius: 50px;
+    height: 20%;
+}
+
+.local{
+    height: 20px;
+}
