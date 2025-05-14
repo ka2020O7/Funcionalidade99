@@ -1,34 +1,108 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/style.css">
-    <title>99</title>
+    <link rel="stylesheet" href="../style/agendar.css">
+    <title>99 - Pedido de corrida</title>
 </head>
 
 <body>
-    <header>
-        <a href="../publico/toggle.hmtl"><img src="../style/asset/toggle.png.png" alt="" class="toggle"></a>
-        <a href="../publico/toggle.hmtl"><img src="../style/asset/moeda.gif.webp" alt="" id="moeda"></a>
-    </header>
+    
+    <div class="floating-header">
+        <button class="circle-btn"><img src="../style/asset/toggle.png.png" alt="Menu"></button>
+        <div class="coin-container">
+            <img src="../style/asset/moeda.gif.webp" alt="Moeda">
+            <span class="coin-badge">5%</span>
+        </div>
+    </div>
 
+   
     <main>
-        <div id="ParaOndeVamos">
-            <div id="ParaOndeVamos2">
-                <p><img src="../style/asset/lupa.png.png" alt="" class="local"> Para onde vamos?</p>
+        <div class="main-card">
+            <div class="cupom-banner">Cupom de 12% OFF expira em 1 dia(s)</div>
+            <div class="search-title">
+                <img src="../style/asset/lupa.png.png" alt="Buscar" class="search-icon">
+                <span>Para onde vamos?</span>
             </div>
-            <div class="lugares">
-                <p><img src="../style/asset/local.png.png" alt="" class="local">           Rua David Thomas Pereira,230</p>
+            <div class="recent-locations">
+                <div class="location-item">
+                    <img src="../style/asset/local.png.png" alt="Local" class="location-icon">
+                    <span>Rua David Thomas Pereira, 230</span>
+                </div>
+                <div class="location-item">
+                    <img src="../style/asset/local.png.png" alt="Local" class="location-icon">
+                    <span>Condomínio Residencial Vanessa</span>
+                </div>
             </div>
-            <div class="lugares">
-                <p><img src="../style/asset/local.png.png" alt="" class="local">  Condomínio Residencial Vanessa</p>
+           
+            <button id="btnAbrirAgendamento" class="btn-agendar">Agendar Corrida</button>
+        </div>
+
+       
+        <div class="promotions">
+            <div class="promo-card">
+                <img src="../style/asset/Design_sem_nome__1_-removebg-preview.png" alt="Promoção 1">
             </div>
-            <div class="anuncios">
-                <img src="../style/asset/Design_sem_nome__1_-removebg-preview.png" alt="">
+            <div class="promo-card">
+                <img src="../style/asset/Design_sem_nome__1_-removebg-preview.png" alt="Promoção 2">
+            </div>
+            <div class="promo-card">
+                <img src="../style/asset/Design_sem_nome__1_-removebg-preview.png" alt="Promoção 3">
             </div>
         </div>
     </main>
+
+   
+    <div id="modalAgendamento" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1>Agendar Corrida</h1>
+            <form id="agendamentoForm">
+                <div class="form-group">
+                    <label for="origem">Origem:</label>
+                    <input type="text" id="origem" name="origem" required placeholder="Digite o endereço de origem">
+                </div>
+
+                <div class="form-group">
+                    <label for="destino">Destino:</label>
+                    <input type="text" id="destino" name="destino" required placeholder="Digite o endereço de destino">
+                </div>
+
+                <div class="form-group">
+                    <label for="data">Data:</label>
+                    <input type="date" id="data" name="data" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="hora">Hora:</label>
+                    <input type="time" id="hora" name="hora" required>
+                </div>
+
+                <button type="submit" class="btn-agendar">Confirmar Agendamento</button>
+            </form>
+        </div>
+    </div>
+
+    
+    <footer class="footer-nav">
+        <div class="footer-item active">
+            <img src="../style/asset/corrida.png" alt="Corrida">
+            <span>Corrida</span>
+        </div>
+        <div class="footer-item">
+            <img src="../style/asset/entrega.png" alt="Entrega">
+            <span>Entrega</span>
+        </div>
+        <div class="footer-item">
+            <img src="../style/asset/99pay.png" alt="99Pay">
+            <span>99Pay</span>
+        </div>
+    </footer>
+
+    <script src="../script/agendar.js"></script>
 </body>
 
 </html>

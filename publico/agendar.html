@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Corrida - 99</title>
+    <link rel="stylesheet" href="../style/agendar.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Agendar Corrida</h1>
+        <form id="agendamentoForm">
+            <div class="form-group">
+                <label for="origem">Origem:</label>
+                <input type="text" id="origem" name="origem" required placeholder="Digite o endereço de origem">
+            </div>
+
+            <div class="form-group">
+                <label for="destino">Destino:</label>
+                <input type="text" id="destino" name="destino" required placeholder="Digite o endereço de destino">
+            </div>
+
+            <div class="form-group">
+                <label for="data">Data:</label>
+                <input type="date" id="data" name="data" required>
+            </div>
+
+            <div class="form-group">
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora" required>
+            </div>
+
+            <button type="submit" class="btn-agendar">Agendar Corrida</button>
+        </form>
+    </div>
+
+    <script src="../script/agendar.js"></script>
+</body>
+</html> 

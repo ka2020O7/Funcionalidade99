@@ -1,51 +1,185 @@
-body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    align-items: center;
-    text-align: center;
-    background-image: url(../style/asset/maps.jpg);
-    background-size: clamp(100px, 100%, 500px) auto;
-   
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-header{
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    background-image: url(asset/maps.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.floating-header {
+    position: fixed;
+    top: 24px;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    z-index: 10;
+    pointer-events: none;
+}
+.floating-header .circle-btn,
+.floating-header .coin-container {
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    width: 56px;
+    height: 56px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    border: none;
+    pointer-events: auto;
+}
+.floating-header .circle-btn img {
+    width: 32px;
+    height: 32px;
+}
+.floating-header .coin-container {
+    position: relative;
+}
+.floating-header .coin-container img {
+    width: 36px;
+    height: 36px;
+}
+.coin-badge {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: #ffe066;
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 12px;
+    padding: 2px 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.10);
 }
 
-.toggle{
-    width: 60px;
+main {
+    padding-top: 110px;
+    padding-bottom: 110px;
 }
 
-#moeda{
-    width: 100px;
+.main-card {
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    max-width: 500px;
+    margin: 0 auto 24px auto;
+    padding: 24px 20px 16px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
-
-#ParaOndeVamos{
-    margin-top: 60%;
-    border: 5%;
-    border-radius: 15%;
-    background-color: rgb(202, 202, 202);
-    padding: 3%;
+.cupom-banner {
+    background: #1ed2b6;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 16px;
+    padding: 6px 16px;
+    text-align: center;
+    margin-bottom: 18px;
+}
+.search-title {
+    display: flex;
+    align-items: center;
+    background: #f5f5f5;
+    border-radius: 16px;
+    padding: 14px 16px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 18px;
+    gap: 12px;
+}
+.search-title .search-icon {
+    width: 28px;
+    height: 28px;
+    opacity: 0.7;
+}
+.recent-locations {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    height: 30%;
+}
+.location-item {
+    display: flex;
+    align-items: center;
+    background: #f5f5f5;
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 1.1rem;
+    color: #222;
+    gap: 10px;
+}
+.location-item .location-icon {
+    width: 22px;
+    height: 22px;
+    opacity: 0.7;
 }
 
-#ParaOndeVamos2{
-    background-color: aliceblue;
-    border-radius: 50px;
-    height: 30%;
-   
+.promotions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    max-width: 500px;
+    margin: 0 auto 16px auto;
+}
+.promo-card {
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 110px;
+}
+.promo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.lugares{
-    background-color: aliceblue;
-    border-radius: 50px;
-    height: 20%;
+.footer-nav {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    background: #fff;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.10);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 0 4px 0;
+    z-index: 20;
 }
-
-.local{
-    height: 20px;
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #888;
+    font-size: 0.95rem;
+    font-weight: 500;
+    gap: 2px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    transition: background 0.2s, color 0.2s;
+}
+.footer-item img {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 2px;
+}
+.footer-item.active, .footer-item:hover {
+    background: #f5f5f5;
+    color: #222;
 }
